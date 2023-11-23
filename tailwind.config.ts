@@ -16,7 +16,7 @@ const config: Config = {
       },
     },
     maxWidth: {
-      'max_container': '1200px',
+      'max_container': '1400px',
     },
   },
   plugins: [],
