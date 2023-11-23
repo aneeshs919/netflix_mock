@@ -12,7 +12,7 @@ interface GridCardProps {
     }[];
     rating: number,
     openModal?: () => (void);
-    removeAction: boolean
+    removeAction?: boolean
 }
 
 const GridCard = ({ id, banner, title, genre, rating, openModal, removeAction }: GridCardProps) => {
