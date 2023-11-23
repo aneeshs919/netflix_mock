@@ -25,8 +25,8 @@ const LINKS = [
 
 const Header = () => {
     return (
-        <>
-            <div className='flex justify-between items-center p-4 mb-5 lg:mb-0'>
+        <div className='max-w-max_container m-auto'>
+            <div className='flex justify-between items-center py-4 px-4 mb-5 lg:mb-0'>
                 <div className='flex gap-4 items-center'>
                     <Image src={'/logo.webp'} width={'100'} height={'20'} alt='play' />
                     <div className='block lg:hidden'>Menu</div>
@@ -45,7 +45,7 @@ const Header = () => {
                 </div>
 
             </div>
-        </>
+        </div>
 
     )
 }
