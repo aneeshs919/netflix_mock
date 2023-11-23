@@ -42,7 +42,7 @@ const Player = () => {
         <div className="relative justify-center items-center">
           <video
             ref={playerRef}
-            className="max-w-max_container w-full h-[500px] rounded-lg "
+            className="max-w-max_container w-full h-[200px] lg:h-[500px] rounded-lg "
             width="640"
             height="360"
             poster={movieData?.banner}
@@ -64,10 +64,10 @@ const Player = () => {
           <div className="text-2xl lg:text-5xl mb-2 lg:mb-6 font-weight w-full lg:w-1/2">
             {movieData?.title}
           </div>
-          <div className="text-xl hidden lg:flex w-full lg:w-1/2">
+          <div className="text-xl w-full lg:w-1/2">
             {movieData?.overview}
           </div>
-          <div className="text-xl capitalize gap-4 mt-4 hidden lg:flex">
+          <div className="text-xl capitalize gap-4 mt-4 flex">
             {movieData?.genre.map((item) => (
               <div key={item.id}>{item.name} .</div>
             ))}
