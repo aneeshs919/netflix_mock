@@ -104,7 +104,7 @@ const MovieDetails = ({ movie, horror }: {
 
 const Title = (props: { title: string }) => {
     return (
-        <div className='text-2xl pl-[50px] lg:pl-[100px]'>{props.title}</div>
+        <div className='text-xl lg:text-2xl pl-4 lg:pl-[100px]'>{props.title}</div>
     )
 }
 
@@ -137,7 +137,7 @@ const Browse = ({ popular, horror }: {
                 <HeroBanner popularPick={popularPick} />
                 <div className='mt-10'>
                     <Title title={'Popular on Netflix'} />
-                    <div className='flex justify-between gap-6 p-10 mt-[-30px] pb-[150px] pl-[50px] lg:pl-[100px] overflow-auto no-scrollbar'>
+                    <div className='flex justify-between gap-6 p-10 mt-[-30px] pb-[150px] pl-4 lg:pl-[100px] overflow-auto no-scrollbar'>
                         {popular.map(item => {
                             return <GridCard key={item.id} openModal={() => handleOpenModal(item)} id={item.id} banner={item.banner} title={item.title} genre={item.genre} rating={item.rating} />
                         })}
@@ -146,7 +146,7 @@ const Browse = ({ popular, horror }: {
 
                 <div className='mt-[-120px]'>
                     <Title title={'Horror Movies'} />
-                    <div className='flex justify-between gap-6 p-10 mt-[-30px] pl-[50px] pb-[150px]  lg:pl-[100px] overflow-auto no-scrollbar'>
+                    <div className='flex justify-between gap-6 p-10 mt-[-30px] pl-4 pb-[150px]  lg:pl-[100px] overflow-auto no-scrollbar'>
                         {horror.map(item => {
                             return <GridCard key={item.id} openModal={() => handleOpenModal(item)} id={item.id} banner={item.banner} title={item.title} genre={item.genre} rating={item.rating} />
                         })}
