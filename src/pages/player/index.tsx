@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import Header from "@/components/header"
@@ -37,6 +38,9 @@ const Player = () => {
 
   return (
     <div>
+      <Head>
+        <title>{movieData?.title}</title>
+      </Head>
       <Header />
       <div className="max-w-max_container m-auto pb-[100px]">
         <div className="relative justify-center items-center">
@@ -64,9 +68,7 @@ const Player = () => {
           <div className="text-2xl lg:text-5xl mb-2 lg:mb-6 font-weight w-full lg:w-1/2">
             {movieData?.title}
           </div>
-          <div className="text-xl w-full lg:w-1/2">
-            {movieData?.overview}
-          </div>
+          <div className="text-xl w-full lg:w-1/2">{movieData?.overview}</div>
           <div className="text-xl capitalize gap-4 mt-4 flex">
             {movieData?.genre.map((item) => (
               <div key={item.id}>{item.name} .</div>

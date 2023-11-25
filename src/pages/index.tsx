@@ -28,8 +28,6 @@ export default function Home({
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  // const res = await fetch('https://run.mocky.io/v3/f29d179c-4304-4bc3-89df-393f35a07a5e')
-  // const data = await res.json()
   const popular = await fetch(
     "https://run.mocky.io/v3/f29d179c-4304-4bc3-89df-393f35a07a5e"
   ).then((res) => res.json())

@@ -37,7 +37,8 @@ const GridCard = ({
   const router = useRouter()
   const [showDetails, setShowDetails] = useState(false)
   const navigateToDetails = () => {
-    router.push(`/details?id=${id}`, undefined, { shallow: true })
+    // router.push(`/details?id=${id}`, undefined, { shallow: true })
+    openModal && openModal()
   }
 
   const goToPlayer = () => {
@@ -90,7 +91,7 @@ const GridCard = ({
             />
           </div>
           <div
-            onClick={openModal}
+            onClick={navigateToDetails}
             className="bg-gray-600 w-7 h-7 rounded-full flex justify-center items-center">
             <Image
               src={"/arrow.png"}
